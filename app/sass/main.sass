@@ -1,0 +1,1815 @@
+@import config
+
+.wp-caption, .wp-block-image
+	max-width: 100%
+	position: relative
+	img
+		margin-bottom: 10px
+		width: 100%
+	.wp-caption-text, figcaption
+		border-radius: 5px
+		font-size: 16px
+		line-height: 22px
+		color: #332F3C
+		max-width: initial
+		margin-bottom: 30px
+		position: absolute
+		width: 100%
+		bottom: 0
+		color: #fff
+		background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)
+		padding: 64px 24px 24px 24px
+
+.noscroll
+	overflow: hidden
+
+.response
+	position: relative
+	z-index: 2
+
+.success
+	margin-top: 30px
+	background-color: #3fb53f
+	padding: 20px
+	color: #fff
+	animation: fade .25s ease
+	p
+		margin: 0
+
+.errors-list
+	list-style-type: none
+	padding: 0
+	margin-top: 30px
+	background-color: #da4c4c
+	padding: 20px
+	color: #fff
+	animation: fade .25s ease
+
+img
+	max-width: 100%
+	height: auto
+	user-select: none
+
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(19,19,19, .7)
+	z-index: 3
+	display: none
+	animation: fade .35s ease
+.overlay.active
+	display: block
+
+.video
+	position: relative
+	text-decoration: none
+	border-radius: 6px
+	padding-bottom: 56.25%
+	height: 0
+	overflow: hidden
+	margin-bottom: 30px
+	iframe, video
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-width: 0
+		outline-width: 0
+
+.lg-backdrop.in
+	opacity: 0.7
+
+.lg-outer .lg-thumb-outer, .lg-outer .lg-toggle-thumb
+	background-color: rgba(19,19,19, 1)
+
+.breadcrumb-block
+	padding-bottom: 20px
+	+media-breakpoint-up(sm)
+		padding-bottom: 36px
+
+.breadcrumb
+	margin: 0
+	list-style-type: none
+	display: flex
+	font-size: 14px
+	line-height: 19px
+	position: relative
+	z-index: 1
+	padding: 0
+	overflow-x: auto
+	padding-bottom: 10px
+	position: relative
+	+media-breakpoint-up(sm)
+		font-size: 16px
+		overflow: hidden
+		flex-wrap: wrap
+		padding-bottom: 0
+	&__item
+		flex: 0 0 auto
+		+media-breakpoint-up(sm)
+			flex: initial
+	&__link
+		color: #A4A4A4
+		&:after
+			content: '—'
+			margin: 0 5px
+		&:hover
+			text-decoration: none
+			color: $blue
+			&:after
+				color: #A4A4A4
+	&__item_active
+		color: $blue
+
+.pagination
+	list-style-type: none
+	padding: 0
+	display: flex
+	margin: 0
+	margin: 30px 0
+	&__item
+		margin-right: 8px
+		flex: 0 0 33px
+		width: 33px
+		height: 33px
+		+media-breakpoint-up(sm)
+			flex: 0 0 40px
+			width: 40px
+			height: 40px
+	&__item_active .pagination__link
+		border-color: $accent
+		background-color: $accent
+		color: #fff
+	&__link
+		background-color: transparent
+		font-size: 16px
+		line-height: 25px
+		height: 100%
+		width: 100%
+		color: #000
+		display: flex
+		align-items: center
+		justify-content: center
+		text-decoration: none
+		border-radius: 50%
+		transition: border-color .25s ease, color .25s ease, background-color .25s ease
+		border-color: #000
+		border: 1px solid $accent
+		color: #000
+		&:hover
+			text-decoration: none
+			border-color: $accent
+			color: #fff
+			background-color: $accent
+
+.content
+	margin-bottom: 30px
+	&_m0
+		margin: 0
+	iframe
+		width: 100%
+		margin: 0 auto !important
+	p
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		color: $text
+		margin: 0
+		&:not(:last-child)
+			margin-bottom: 10px
+		+media-breakpoint-up(sm)
+			&:not(:last-child)
+				margin-bottom: 24px
+	b, strong
+		font-weight: 700
+		font-size: 17px
+		line-height: 24px
+		margin-bottom: 15px
+	a
+		color: $accent
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	img
+		margin-bottom: 30px
+		border-radius: 5px
+	h2
+		font-family: OpenSans, sans-serif
+		font-weight: 700
+		font-size: 20px
+		line-height: 26px
+		color: $text
+		margin-bottom: 20px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+			line-height: 36px
+	h3
+		font-family: Open Sans, sans-serif
+		font-size: 20px
+		font-weight: 700
+		line-height: 30px
+		color: $text
+		margin-bottom: 20px
+	ol
+		padding: 0
+		padding-left: 17px
+		margin-left: 10px
+		li
+			margin-bottom: 10px
+			padding-left: 8px
+		li::marker
+			color: $accent
+			font-weight: 700
+	ul
+		list-style-type: none
+		margin-left: 10px
+		padding: 0
+		margin-bottom: 15px
+		margin-left: 0
+		+media-breakpoint-up(sm)
+			margin-bottom: 25px
+		li
+			font-size: 16px
+			line-height: 24px
+			font-weight: 300
+			margin-bottom: 10px
+			// display: flex
+			position: relative
+			padding-left: 25px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				height: 8px
+				width: 8px
+				flex: 0 0 8px
+				border-radius: 50%
+				background-color: $accent
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25)
+				display: inline-block
+				margin-right: 15px
+				margin-top: 9px
+	blockquote
+		padding: 120px 16px 24px 16px
+		position: relative
+		margin-bottom: 24px
+		font-size: 16px
+		line-height: 24px
+		color: #000
+		border-radius: 16px
+		background: rgba(117, 168, 190, 0.20)
+		&:after
+			content: ''
+			position: absolute
+			width: calc(100% - 32px)
+			height: 4px
+			background-color: $blue
+			left: 16px
+			top: 94px
+		&:before
+			content: ''
+			position: absolute
+			left: 16px
+			top: 16px
+			height: 56px
+			width: 56px
+			background-color: #fff
+			border-radius: 50%
+			background-image: url('../images/quote.svg')
+			background-position: center
+			background-repeat: no-repeat
+			display: inline-block
+			background-size: 20px
+		+media-breakpoint-up(sm)
+			padding: 24px 32px 24px 104px
+			font-size: 18px
+			line-height: 28px
+			&:before
+				top: calc(50% - 28px)
+			&:after
+				width: 4px
+				height: calc(100% - 48px)
+				left: 88px
+				top: 24px
+	.wp-audio-shortcode
+		margin-bottom: 24px
+	.aligncenter
+		display: block
+		margin: 0 auto
+
+.section
+	padding: 30px 0
+	+media-breakpoint-up(sm)
+		padding: 41px 0
+	+media-breakpoint-up(xl)
+		padding: 71px 0
+	&_gray
+		background-color: #fafafa
+	&_pt0
+		padding-top: 0
+	&_pb0
+		padding-bottom: 0
+
+.container
+	padding: 0 10px
+	margin: 0 auto
+	width: 100%
+	+media-breakpoint-up(sm)
+		padding: 0 15px
+	+media-breakpoint-up(xl)
+		max-width: 1750px
+	&_text
+		+media-breakpoint-up(xl)
+			max-width: 811px
+
+.row
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -15px
+
+.header
+	padding: 15px 0
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	background-color: $header
+	z-index: 4
+	+media-breakpoint-up(sm)
+		padding: 20px 0
+	/* .header__row */
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin: 0 -10px
+		+media-breakpoint-up(wxpp)
+			margin: 0 -15px
+	/* .header__left */
+	&__left
+		padding: 0 15px
+		flex: 0 0 151px
+		+media-breakpoint-up(sm)
+			flex: 0 1 173px
+		+media-breakpoint-up(lg)
+			padding: 0 10px
+			flex: 0 0 285px
+		+media-breakpoint-up(wxp)
+			flex: 0 0 335px
+		+media-breakpoint-up(wxpp)
+			flex: 0 0 437px
+			padding: 0 15px
+	/* .header__right */
+	&__right
+		display: flex
+		align-items: center
+		justify-content: right
+		// flex: 0 1 1340px
+		padding: 0 15px
+		+media-breakpoint-up(lg)
+			padding: 0 10px
+			flex: 0 1 100%
+			min-width: 1px
+		+media-breakpoint-up(xl)
+			justify-content: space-between
+		+media-breakpoint-up(wxpp)
+			padding: 0 15px
+	/* .header__menu */
+	&__menu
+		margin-right: 20px
+	/* .header__search */
+	&__search
+		height: 38px
+		width: 38px
+		cursor: pointer
+		border-radius: 50%
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: background-color .35s ease-out
+		margin-right: 20px
+		background-color: $accent
+		&:hover
+			background-color: #fff
+			.header__search-svg
+				fill: $accent
+		+media-breakpoint-up(wxp)
+			height: 48px
+			width: 48px
+			// margin-right: 40px
+	/* .header__search-svg */
+	&__search-svg
+		width: 18px
+		max-height: 18px
+		fill: #fff
+		transition: fill .35s ease-out
+		+media-breakpoint-up(wxp)
+			width: 24px
+			max-height: 24px
+
+	/* .header__social */
+	&__social
+		display: none
+		+media-breakpoint-up(sm)
+			display: block
+	&__toggle-menu
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		padding: 10px 0
+		position: relative
+		z-index: 22
+		color: #fff
+		&:hover
+			text-decoration: none
+			color: #fff
+		+media-breakpoint-up(sm)
+			margin-left: 15px
+		+media-breakpoint-up(xl)
+			display: none
+		&.on .header__toggle-line
+			background-color: transparent
+		&.on .header__toggle-line::before
+			transform: rotate(45deg) translate(2px, 5px)
+			background-color: #fff
+			left: 3px
+		&.on .header__toggle-line::after
+			transform: rotate(-45deg) translate(2px, -5px)
+			background-color: #fff
+			left: 3px
+	&__toggle-line
+		width: 35px
+		height: 1px
+		background-color: #fff
+		display: block
+		position: relative
+		transition: all 0.3s
+		&:after, &:before
+			content: ''
+			width: 35px
+			height: 1px
+			background-color: #fff
+			position: absolute
+			transition: all 0.3s
+			left: 0
+		&:after
+			top: 5px
+		&:before
+			bottom: 5px
+
+.logo
+	&_footer
+		display: none
+		margin-bottom: 25px
+		+media-breakpoint-up(wxp)
+			display: block
+	&_mobile
+		display: block
+		margin-bottom: 20px
+		+media-breakpoint-up(wxp)
+			display: none
+
+	/* .logo__img */
+	&__img
+
+.menu
+	width: 100%
+	padding: 10px 15px 30px 15px
+	position: fixed
+	overflow-y: auto
+	right: 0
+	top: 67px
+	bottom: 0
+	z-index: 23
+	// padding: 10px 15px 30px 15px
+	transform: translateX(100%)
+	transition: transform .35s ease
+	background-color: $header
+	+media-breakpoint-up(sm)
+		width: 498px
+		padding: 36px 15px 30px 108px
+		top: 78px
+	+media-breakpoint-up(xl)
+		width: auto
+		padding: 0
+		position: initial
+		transform: none
+		overflow-y: inherit
+		height: auto
+		background-color: transparent
+	&_footer
+		width: auto
+		padding: 0
+		position: initial
+		transform: none
+		overflow-y: inherit
+		height: auto
+		background-color: transparent
+		z-index: 1
+		margin-bottom: 20px
+		+media-breakpoint-up(md)
+			margin-bottom: 0
+	&.on
+		transform: translateX(0%)
+	/* .menu__list */
+	&__list
+		list-style-type: none
+		margin: 0
+		padding: 0
+		+media-breakpoint-up(xl)
+			display: flex
+	/* .menu__item */
+	&__item
+		position: relative
+		&.open
+			.menu__item-svg-block
+				background-color: $accent
+			.menu__item-svg
+				transform: rotate(180deg)
+		+media-breakpoint-up(xl)
+			height: auto
+			&:not(:last-child)
+				margin-right: 30px
+			&:hover
+				.menu__link
+					&:after
+						opacity: 1
+				.menu__sub
+					display: flex
+					animation: fade .4s ease-in-out
+		+media-breakpoint-up(wxpp)
+			&:not(:last-child)
+				margin-right: 40px
+	/* .menu__link */
+	&__link
+		font-weight: 600
+		letter-spacing: 0.3px
+		font-family: Inter, sans-serif
+		text-transform: uppercase
+		transition: color .35s ease-out
+		position: relative
+		padding: 11px 0
+		display: block
+		border-bottom: 1px solid #f5f5f5
+		min-height: 50px
+		color: #fff
+		&:after
+			content: ''
+			position: absolute
+			bottom: 5px
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: #fff
+			display: block
+			opacity: 0
+			transition: opacity .35s ease-out
+		&:hover
+			text-decoration: none
+			color: $bluedark
+		+media-breakpoint-up(xl)
+			display: inline
+			border-bottom: none
+			&:hover
+				color: #fff
+				text-decoration: none
+				&:after
+					opacity: 1
+	&__link_fz14
+		font-size: 14px
+		line-height: 20px
+		border-color: transparent
+		min-height: initial
+	/* .menu__item-svg-block */
+	&__item-svg-block
+		position: absolute
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 40px
+		height: 40px
+		background-color: $bluedark
+		right: 0
+		top: 5px
+		transition: background-color .35s ease-out
+		transform: rotate(90deg)
+		+media-breakpoint-up(xl)
+			right: -15px
+			top: 0
+			display: block
+			width: auto
+			height: auto
+			background-color: transparent
+	/* .menu__item-svg */
+	&__item-svg
+		height: 9px
+		width: 9px
+		fill: #fff
+	/* .menu__sub */
+	&__sub
+		list-style-type: none
+		padding: 0
+		left: 0
+		margin: 0
+		transition: max-height .25s ease-out, margin .25s ease-out
+		max-height: 0
+		z-index: 2
+		background-color: $header
+		overflow: hidden
+		+media-breakpoint-up(xl)
+			background-color: #fff
+			box-shadow: 0 0 3px rgba(0,0,0,.15)
+			border-left: none
+			display: none
+			max-height: 0
+			padding: 20px
+			max-height: initial
+			width: 245px
+			position: absolute
+			top: 35px
+			border-radius: 5px
+			flex-direction: column
+			flex-wrap: wrap
+	/* .menu__sub-item */
+	&__sub-item
+	/* .menu__sub-link */
+	&__sub-link
+		font-size: 16px
+		line-height: 22px
+		font-weight: 500
+		color: #fff
+		display: block
+		position: relative
+		border-bottom: 1px solid #778389
+		padding: 8px 0
+		padding-left: 15px
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			right: 0
+			height: 1px
+			width: 0
+			background-color: $accent
+			transition: width .35s ease-out
+		&:hover
+			text-decoration: none
+		+media-breakpoint-up(xl)
+			color: $text
+			border-bottom: none
+			padding: 5px 0
+			display: inline-block
+			&:hover
+				color: #777
+				&:after
+					width: 100%
+					left: 0
+
+.search
+	position: relative
+	&_menu
+		margin: 15px 0
+		+media-breakpoint-up(lg)
+			display: none
+	/* .search__input */
+	&__input
+		border-radius: 100px
+		padding: 15px 0 15px 30px
+		border: 1px solid #BAC2CA
+		width: 314px
+		outline: 0
+	&__input_menu
+		width: 100%
+	/* .search__btn */
+	&__btn
+		position: absolute
+		right: 6px
+		top: 6px
+		height: 48px
+		width: 48px
+		border-radius: 50%
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: $accent
+		border: none
+		border: 1px solid $accent
+		transition: background-color .35s ease-out
+		&:hover
+			background-color: transparent
+			.search__btn-svg
+				fill: $accent
+	/* .search__btn-svg */
+	&__btn-svg
+		fill: #fff
+		height: 24px
+		width: 24px
+		flex: 0 0 24px
+		transition: fill .35s ease-out
+
+.social
+	display: flex
+	&_menu
+		margin-top: 30px
+		+media-breakpoint-up(sm)
+			display: none
+	/* .social__item */
+	&__item
+		height: 38px
+		width: 38px
+		border-radius: 50%
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: background-color .35s ease-out
+		background-color: #fff
+		&:not(:last-child)
+			margin-right: 20px
+		&:hover
+			background-color: $accent
+			.social__item-svg
+				fill: #fff
+		+media-breakpoint-up(wxp)
+			height: 48px
+			width: 48px
+	&__item_fff
+		background-color: #fff
+	/* .social__item-svg */
+	&__item-svg
+		width: 18px
+		max-height: 18px
+		fill: $bluedark
+		transition: fill .35s ease-out
+		+media-breakpoint-up(wxp)
+			width: 24px
+			max-height: 24px
+
+.main
+	padding-top: 95px
+	padding-bottom: 35px
+	+media-breakpoint-up(sm)
+		padding-top: 125px
+	+media-breakpoint-up(md)
+		padding-bottom: 75px
+	+media-breakpoint-up(xl)
+		padding-top: 165px
+	/* .main__row */
+	&__row
+		+media-breakpoint-up(lg)
+			display: flex
+			margin: 0 -10px
+		+media-breakpoint-up(wxpp)
+			margin: 0 -15px
+	&__row_inner
+		display: flex
+		flex-direction: column-reverse
+		+media-breakpoint-up(wxp)
+			flex-direction: row
+	/* .main__left */
+	&__left
+		padding-bottom: 30px
+		+media-breakpoint-up(sm)
+			padding-bottom: 41px
+		+media-breakpoint-up(xl)
+			padding-bottom: 71px
+		+media-breakpoint-up(lg)
+			flex: 0 0 285px
+			padding: 0 10px
+		+media-breakpoint-up(wxp)
+			flex: 0 0 335px
+		+media-breakpoint-up(wxpp)
+			flex: 0 0 437px
+			padding: 0 15px
+		&.on
+			transform: translateX(0%)
+	/* .main__single-right */
+	&__single-right
+		+media-breakpoint-up(lg)
+			flex: 0 0 262px
+			padding: 0 10px
+		+media-breakpoint-up(wxpp)
+			padding: 0 15px
+	/* .main__right */
+	&__right
+		order: 1
+		+media-breakpoint-up(lg)
+			padding: 0 10px
+			flex: 0 1 100%
+			min-width: 1px
+			order: 0
+		+media-breakpoint-up(wxpp)
+			padding: 0 15px
+	/* .main__right-row */
+	&__right-row
+		padding-bottom: 30px
+		+media-breakpoint-up(sm)
+			padding-bottom: 41px
+		+media-breakpoint-up(lg)
+			display: flex
+			margin: 0 -10px
+		+media-breakpoint-up(xl)
+			justify-content: space-between
+			padding-bottom: 71px
+		+media-breakpoint-up(wxpp)
+			margin: 0 -15px
+	/* .main__right-left */
+	&__right-left
+		+media-breakpoint-up(lg)
+			padding: 0 10px
+			flex: 1
+			min-width: 1px
+		+media-breakpoint-up(wxp)
+			flex: 0 1 844px
+		+media-breakpoint-up(wxpp)
+			padding: 0 15px
+	/* .main__right-sticky */
+	&__right-sticky
+		position: sticky
+		top: 140px
+	/* .main__right-right */
+	&__right-right
+		display: none
+		+media-breakpoint-up(lg)
+			padding: 0 10px
+			display: block
+			flex: 0 0 262px
+		+media-breakpoint-up(wxpp)
+			padding: 0 15px
+
+.sidebar-sticky
+	position: sticky
+	top: -660px
+
+.news-sidebar-block
+	/* .news-sidebar-block__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -10px
+		+media-breakpoint-up(lg)
+			display: block
+			margin: 0
+	/* .news-sidebar-block__col */
+	&__col
+		flex: 0 0 100%
+		padding: 0 10px
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+			margin-bottom: 20px
+		+media-breakpoint-up(lg)
+			flex: 0 0 33.333%
+		+media-breakpoint-up(wxp)
+			padding: 0
+			margin: 0
+
+.news-sidebar
+	display: block
+	&:hover
+		text-decoration: none
+		.news-sidebar__title
+			color: $accent
+	&:not(:last-child)
+		border-bottom: 1px solid #F5F5F5
+		margin-bottom: 20px
+	&_breaking
+		font-weight: 700
+	/* .news-sidebar__breaking-img */
+	&__breaking-img
+		margin-right: 10px
+	/* .news-sidebar__title */
+	&__title
+		color: #000
+		padding-bottom: 20px
+		font-size: 14px
+		transition: color .35s ease-out
+		+media-breakpoint-up(sm)
+			font-size: 16px
+
+.all-item
+	display: flex
+	align-items: center
+	&:hover
+		text-decoration: none
+		.all-item__text
+			text-decoration: none
+		.all-item__btn
+			transform: translate(2px, 0)
+	/* .all-item__text */
+	&__text
+		margin-right: 12px
+		color: $blue
+		font-weight: 600
+		text-decoration: underline
+	/* .all-item__btn */
+	&__btn
+		height: 24px
+		width: 24px
+		border-radius: 50%
+		background-color: $accent
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: transform .35s ease-out
+	/* .all-item__btn-svg */
+	&__btn-svg
+		height: 10px
+		width: 10px
+		fill: #fff
+
+.title-row
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 30px
+
+.title-single
+	color: $text
+	font-family: Inter, sans-serif
+	font-size: 20px
+	font-weight: 700
+	line-height: 30px
+	margin-bottom: 12px
+	+media-breakpoint-up(sm)
+		line-height: 40px
+		font-size: 30px
+		margin-bottom: 24px
+
+.title
+	font-family: Inter, sans-serif
+	font-size: 20px
+	line-height: 30px
+	font-weight: 700
+	letter-spacing: 0.48px
+	padding-bottom: 8px
+	position: relative
+	margin-bottom: 30px
+	&:after
+		content: ''
+		position: absolute
+		width: 115px
+		height: 3px
+		background-color: $accent
+		bottom: 0
+		left: 0
+	+media-breakpoint-up(sm)
+		font-size: 24px
+		line-height: 32px
+		padding-bottom: 12px
+		&:after
+			height: 5px
+	&_mb0
+		margin-bottom: 0
+
+.slider-block
+	position: relative
+
+.slider-btn
+	position: absolute
+	right: 10px
+	bottom: 10px
+	display: flex
+	+media-breakpoint-up(sm)
+		right: 30px
+		bottom: 30px
+	/* .slider-btn__item */
+	&__item
+		height: 40px
+		width: 40px
+		background-color: #fff
+		border-radius: 5px
+		display: flex
+		align-items: center
+		cursor: pointer
+		justify-content: center
+		transition: background-color .35s ease-out
+		&:first-child
+			margin-right: 10px
+		&:hover
+			background-color: $accent
+			.slider-btn__item-svg
+				fill: #fff
+		+media-breakpoint-up(sm)
+			height: 50px
+			width: 50px
+			&:first-child
+				margin-right: 30px
+	/* .slider-btn__item_prev */
+	&__item_prev
+		transform: rotate(180deg)
+	/* .slider-btn__item-svg */
+	&__item-svg
+		height: 10px
+		width: 10px
+		flex: 0 0 10px
+		transition: color .35s ease-out
+		+media-breakpoint-up(sm)
+			height: 20px
+			width: 20px
+			flex: 0 0 20px
+
+	/* .slider-btn__item_next */
+	&__item_next
+
+.main-slider
+	/* .main-slider__item */
+	&__item
+
+.main-item
+	background-color: #F5F5F5
+	border-radius: 15px
+	overflow: hidden
+	transition: background-color .35s ease-out
+	&:hover
+		background-color: $accent
+		.main-item__title
+			color: #fff
+		.date
+			color: #fff
+		.btn
+			color: #fff
+	/* .main-item__row */
+	&__row
+		display: flex
+		flex-direction: column
+		+media-breakpoint-up(sm)
+			flex-direction: row
+			align-items: center
+	/* .main-item__left */
+	&__left
+		flex: 0 0 50%
+		padding: 20px
+		order: 1
+		+media-breakpoint-up(sm)
+			order: 0
+		+media-breakpoint-up(lg)
+			padding: 40px
+	/* .main-item__title */
+	&__title
+		color: #000
+		font-size: 16px
+		font-weight: 600
+		line-height: 24px
+		margin-bottom: 30px
+		transition: color .35s ease-out
+		display: block
+		&:hover
+			text-decoration: none
+		+media-breakpoint-up(sm)
+			min-height: 140px
+			max-height: 140px
+			overflow: hidden
+			font-size: 18px
+			line-height: 28px
+		+media-breakpoint-up(md)
+			min-height: 170px
+			max-height: 170px
+		+media-breakpoint-up(wxp)
+			font-size: 30px
+			line-height: 42px
+	/* .main-item__img */
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	/* .main-item__right */
+	&__right
+		flex: 0 0 50%
+
+.btn
+	border-radius: 20px
+	display: inline-block
+	border: 1px solid $blue
+	color: #4A6A79
+	font-size: 14px
+	font-weight: 600
+	line-height: 24px
+	letter-spacing: 0.32px
+	padding: 12px 24px
+	transition: background-color .35s ease-out, color .35s ease-out
+	&:hover
+		text-decoration: none
+		background-color: $bluedark
+		color: #fff
+	&_w100
+		display: block
+		width: 100%
+		text-align: center
+	+media-breakpoint-up(sm)
+		font-size: 16px
+
+.news
+	/* .news__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -5px
+		+media-breakpoint-up(sm)
+			margin: 0 -10px
+		+media-breakpoint-up(wxpp)
+			margin: 0 -15px
+	&__row_scroll
+		overflow-x: auto
+		flex-wrap: nowrap
+		justify-content: flex-start
+	&__row_scroll-more
+		overflow-x: auto
+		flex-wrap: nowrap
+		justify-content: flex-start
+		+media-breakpoint-up(sm)
+			overflow-x: hidden
+			flex-wrap: wrap
+
+	/* .news__col */
+	&__col
+		padding: 0 5px
+		flex: 0 0 50%
+		max-width: 50%
+		margin-bottom: 30px
+		+media-breakpoint-up(sm)
+			padding: 0 10px
+			flex: 0 0 50%
+			max-width: 50%
+			margin-bottom: 60px
+		+media-breakpoint-up(md)
+			flex: 0 0 33.333%
+			max-width: 33.333%
+		+media-breakpoint-up(xl)
+			flex: 0 0 25%
+			max-width: 25%
+		+media-breakpoint-up(wxpp)
+			padding: 0 15px
+	&__col_scroll
+		flex: 0 0 300px
+		max-width: 300px
+		+media-breakpoint-up(md)
+			flex: 0 0 33.333%
+			max-width: 33.333%
+	&__col_scroll-more
+		flex: 0 0 300px
+		max-width: 300px
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+			max-width: 50%
+		+media-breakpoint-up(md)
+			flex: 0 0 33.333%
+			max-width: 33.333%
+		+media-breakpoint-up(xl)
+			flex: 0 0 25%
+			max-width: 25%
+	&__col_3
+		flex: 0 0 100%
+		max-width: 300px
+		margin-bottom: 30px
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+			max-width: 50%
+			margin-bottom: 60px
+		+media-breakpoint-up(md)
+			flex: 0 0 33.333%
+			max-width: 33.333%
+	&__col_photo
+		flex: 0 0 100%
+		max-width: 100%
+		+media-breakpoint-up(md)
+			flex: 0 0 66.66667%
+			max-width: 66.66667%
+		+media-breakpoint-up(xl)
+			flex: 0 0 50%
+			max-width: 50%
+
+.news-item
+	position: relative
+	display: block
+	&:hover
+		text-decoration: none
+		.news-item__title
+			color: $accent
+		.news-item__img
+			transform: scale(1.03)
+	/* .news-item__play */
+	&__play
+		position: absolute
+		z-index: 1
+		left: 16px
+		top: 16px
+		background-color: $accent
+		width: 36px
+		height: 22px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 5px
+		+media-breakpoint-up(sm)
+			width: 56px
+			height: 32px
+	/* .news-item__play */
+	&__category
+		color: #828282
+		margin-bottom: 8px
+	/* .news-item__play-svg */
+	&__play-svg
+		height: 10px
+		width: 8px
+		fill: #fff
+		+media-breakpoint-up(sm)
+			height: 14px
+			width: 11px
+
+	/* .news-item__img-block */
+	&__img-block
+		overflow: hidden
+		margin-bottom: 16px
+		border-radius: 5px
+	/* .news-item__img */
+	&__img
+		width: 100%
+		// min-height: 210px
+		max-height: 210px
+		object-fit: cover
+		transition: transform .35s ease-out
+	/* .news-item__title */
+	&__title
+		font-weight: 600
+		font-size: 14px
+		margin-bottom: 6px
+		line-height: 20px
+		color: #000
+		transition: color .35s ease-out
+		+media-breakpoint-up(sm)
+			letter-spacing: 0.32px
+			font-size: 16px
+			line-height: 22px
+			position: relative
+			overflow: hidden
+			min-height: 66px
+			max-height: 66px
+	/* .news-item__text */
+	&__text
+		color: #828282
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px
+		letter-spacing: 0.28px
+		min-height: 60px
+		max-height: 60px
+		overflow: hidden
+
+.date
+	color: #828282
+	font-family: Inter, sans-serif
+	font-size: 14px
+	font-weight: 400
+	line-height: 22px
+	letter-spacing: 0.42px
+	margin-bottom: 8px
+	transition: color .35s ease-out
+
+.photo-item
+	position: relative
+	border-radius: 8px
+	overflow: hidden
+	display: block
+	cursor: pointer
+	&:hover
+		.photo-item__img
+			transform: scale(1.03)
+	+media-breakpoint-up(md)
+		border-radius: 16px
+	&_day
+		height: 100%
+	/* .photo-item__block-name */
+	&__block-name
+		position: absolute
+		z-index: 1
+		top: 12px
+		left: 12px
+		color: #fff
+		border-radius: 5px
+		background: $accent
+		padding: 10px 12px
+		font-size: 10px
+		font-weight: 700
+		+media-breakpoint-up(md)
+			top: 32px
+			left: 32px
+			font-size: 12px
+	/* .photo-item__title-block */
+	&__title-block
+		position: absolute
+		z-index: 1
+		left: 0
+		bottom: 0
+		background: linear-gradient(180deg, rgba(117, 168, 190, 0.00) 0%, #4A6A79 100%)
+		width: 100%
+		height: 85px
+		+media-breakpoint-up(md)
+			height: 135px
+	/* .photo-item__title */
+	&__title
+		font-size: 18px
+		font-weight: 700
+		line-height: 28px
+		letter-spacing: -0.24px
+		color: #fff
+		padding-left: 12px
+		padding-top: 12px
+		+media-breakpoint-up(md)
+			font-size: 24px
+			padding-left: 32px
+			padding-top: 32px
+			line-height: 34px
+	/* .photo-item__img */
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		transition: transform .35s ease-out
+
+.special
+	text-decoration: none
+	&:hover
+		text-decoration: none
+	/* .special__row */
+	&__row
+		display: flex
+		align-items: center
+		margin: 0 -10px
+		justify-content: space-between
+		flex-direction: column
+		+media-breakpoint-up(sm)
+			margin: 0 -15px
+			flex-direction: row
+	/* .special__left */
+	&__left
+		padding: 0 10px
+		+media-breakpoint-up(sm)
+			padding: 0 15px
+			flex: 0 0 400px
+	/* .special__block-name */
+	&__block-name
+		color: #FFF
+		font-family: Inter, sans-serif
+		font-size: 12px
+		font-weight: 700
+		line-height: 12px
+		text-transform: uppercase
+		margin-bottom: 24px
+		background-color: $bluedark
+		padding: 8px
+		display: inline-block
+		border-radius: 4px
+		+media-breakpoint-up(sm)
+			margin-bottom: 48px
+	/* .special__title */
+	&__title
+		font-family: Inter, sans-serif
+		font-size: 24px
+		font-weight: 600
+		line-height: 30px
+		margin-bottom: 8px
+		color: #353945
+	/* .special__author */
+	&__author
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		margin-bottom: 20px
+	/* .special__desc */
+	&__desc
+		color: #777E90
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		margin-bottom: 24px
+		+media-breakpoint-up(sm)
+			margin-bottom: 0
+	/* .special__right */
+	&__right
+		padding: 0 10px
+		flex: 1
+		+media-breakpoint-up(sm)
+			padding: 0 15px
+
+	/* .special__img */
+	&__img
+		border-radius: 16px
+		width: 100%
+
+.photo
+	/* .photo__row */
+	&__row
+		+media-breakpoint-up(sm)
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -10px
+		+media-breakpoint-up(wxpp)
+			margin: 0 -15px
+	/* .photo__col */
+	&__col
+		margin-bottom: 30px
+		+media-breakpoint-up(sm)
+			padding: 0 10px
+			flex: 0 0 50%
+		+media-breakpoint-up(wxpp)
+			padding: 0 15px
+
+.footer
+	background: $header
+	padding: 60px 0
+	color: #fff
+	/* .footer__row */
+	&__row
+		display: flex
+		flex-direction: column
+		margin: 0 -10px
+		+media-breakpoint-up(sm)
+			margin: 0 -15px
+		+media-breakpoint-up(wxp)
+			flex-direction: row
+	/* .footer__left */
+	&__left
+		order: 1
+		padding: 0 10px
+		+media-breakpoint-up(sm)
+			padding: 0 15px
+		+media-breakpoint-up(wxp)
+			flex: 0 0 480px
+			order: 0
+		+media-breakpoint-up(wxpp)
+			flex: 0 0 550px
+	/* .footer__p */
+	&__p
+		margin: 12px 0
+		font-size: 14px
+		font-family: Inter, sans-serif
+		line-height: 20px
+	/* .footer__right */
+	&__right
+		padding: 0 10px
+		order: 0
+		+media-breakpoint-up(sm)
+			padding: 0 15px
+		+media-breakpoint-up(wxp)
+			order: 1
+	/* .footer__right-top */
+	&__right-top
+		+media-breakpoint-up(md)
+			display: flex
+			align-items: center
+			justify-content: space-between
+	/* .footer__right-center */
+	&__right-center
+		margin: 20px 0
+		+media-breakpoint-up(lg)
+			margin: 13px 0
+			display: flex
+			align-items: center
+			justify-content: space-between
+			flex-wrap: wrap
+	/* .footer__item */
+	&__item
+		font-family: Inter, sans-serif
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px
+		margin-bottom: 10px
+		a
+			color: #fff
+			&:hover
+				text-decoration: none
+		span
+			color: #fff
+			font-family: Inter, sans-serif
+			font-size: 14px
+			font-weight: 700
+			line-height: 20px
+	/* .footer__copy */
+	&__copy
+		font-family: Inter, sans-serif
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px
+		display: none
+		+media-breakpoint-up(wxp)
+			display: block
+	&__copy_mobile
+		display: block
+		+media-breakpoint-up(wxp)
+			display: none
+	/* .footer__dev */
+	&__dev
+		font-family: Inter, sans-serif
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px
+		color: #fff
+		display: none
+		align-items: center
+		margin-top: 26px
+		&:hover
+			text-decoration: none
+			color: #fff
+		img
+			margin-left: 15px
+		+media-breakpoint-up(wxp)
+			display: flex
+	&__dev_mobile
+		display: flex
+		+media-breakpoint-up(wxp)
+			display: none
+	/* footer__portal */
+	&__portal
+		margin-top: 15px
+		+media-breakpoint-up(lg)
+			margin-top: 35px
+
+.gallery
+	margin-bottom: 16px
+	/* .gallery__row */
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -5px
+		+media-breakpoint-up(md)
+			margin: 0 -10px
+	/* .gallery__col */
+	&__col
+		flex: 0 0 50%
+		padding: 0 5px
+		margin-bottom: 10px
+		+media-breakpoint-up(md)
+			margin-bottom: 20px
+			padding: 0 10px
+			flex: 0 0 33.333%
+
+.gallery-item
+	position: relative
+	cursor: pointer
+	border-radius: 5px
+	overflow: hidden
+	&:hover
+		.gallery-item__hover
+			display: flex
+	/* .gallery-item__img */
+	&__img
+		width: 100%
+		object-fit: cover
+		// min-height: 120px
+		// +media-breakpoint-up(sm)
+		// 	min-height: 200px
+		// +media-breakpoint-up(md)
+		// 	min-height: 160px
+		// +media-breakpoint-up(lg)
+		// 	min-height: 270px
+		// +media-breakpoint-up(wxpp)
+		// 	min-height: 290px
+	/* .gallery-item__hover */
+	&__hover
+		animation: fade .35s ease-out
+		display: none
+		position: absolute
+		align-items: center
+		justify-content: center
+		background-color: rgba(0,0,0, .2)
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+	/* .gallery-item__svg */
+	&__svg
+		fill: #fff
+		height: 24px
+		width: 24px
+		flex: 0 0 24px
+
+.share
+	margin-bottom: 30px
+	+media-breakpoint-up(sm)
+		display: flex
+		align-items: center
+	&__text
+		font-size: 18px
+		line-height: 18px
+		font-weight: 600
+		color: #2D2C32
+		margin-bottom: 10px
+		+media-breakpoint-up(sm)
+			margin-right: 10px
+			margin-bottom: 0
+
+.search-block
+	position: relative
+	&_page
+		margin-bottom: 30px
+	&__input
+		flex: 1
+		width: 100%
+		margin-bottom: 10px
+		font-size: 16px
+		line-height: 16px
+		color: #787878
+		padding: 13px 20px
+		background-color: transparent
+		border: none
+		border-bottom: 1px solid #787878
+		&::placeholder
+			font-size: 16px
+			line-height: 26px
+			color: #787878
+		&:focus
+			outline: 0
+		+media-breakpoint-up(sm)
+			margin-right: 10px
+			margin-bottom: 0
+	&__input_modal
+		background-color: transparent
+		border: none
+		border-bottom: 1px solid #fff
+		color: #fff
+		font-size: 20px
+		padding: 20px 10px
+		margin: 0
+		margin-bottom: 10px
+		&::placeholder
+			color: #fff
+			font-size: 20px
+		+media-breakpoint-up(sm)
+			font-size: 24px
+			padding: 20px
+			&::placeholder
+				font-size: 24px
+	&__input_search
+		padding-right: 74px
+	&__btn
+		width: 100%
+		height: 50px
+		border: none
+		background-color: $accent
+		color: #fff
+		border: 1px solid $accent
+		font-size: 14px
+		line-height: 16px
+		text-transform: uppercase
+		transition: background-color .25s ease-out
+		position: absolute
+		width: 50px
+		right: 0
+		background: transparent
+		border: none
+		height: 100%
+		+media-breakpoint-up(sm)
+			width: 100px
+		&:focus
+			outline: 0
+		&:hover
+			background-color: transparent
+		+media-breakpoint-up(sm)
+			flex: 0 0 200px
+	&__btn_modal
+		position: absolute
+		width: 74px
+		right: 0
+		top: 0
+		background: transparent
+		border: none
+		height: 74px
+	&__btn-svg
+		height: 25px
+		width: 25px
+		fill: #fff
+		transition: fill .25s ease-out
+		&:hover
+			fill: $blue
+		+media-breakpoint-up(sm)
+			height: 30px
+			width: 30px
+	&__btn-svg_page
+		fill: #787878
+	&__datepick
+		color: #fff
+		display: flex
+		align-items: flex-end
+	&__datepick-item
+		&:first-child
+			margin-right: 10px
+
+.modal
+	display: none
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: $accent
+	top: 0
+	left: 0
+	z-index: 23
+	animation: fade .25s ease
+	&.opacity
+		display: flex
+		align-items: center
+		justify-content: center
+	&__content
+		padding: 10px
+		+media-breakpoint-up(sm)
+			padding: 50px
+	&__close
+		position: absolute
+		cursor: pointer
+		top: 27px
+		right: 14px
+		padding: 15px 0
+		z-index: 2
+		&:before, &:after
+			content: ''
+			width: 35px
+			height: 1px
+			display: block
+			background-color: #fff
+		&:after
+			transform: rotate(45deg)
+		&:before
+			transform: rotate(-45deg)
+		+media-breakpoint-up(sm)
+			top: 15px
+			right: 10px
+
+.modal-content
+	// margin: 0
+	width: 100vw
+	height: 100vh
+	z-index: 999
+	position: relative
+	background: #55515b
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15)
+	padding: 60px 30px 35px 30px
+	overflow: auto
+	border-radius: 5px
+	+media-breakpoint-up(sm)
+		// margin: 8% auto
+		width: 470px
+		height: 100%
+		max-height: 680px
+		padding: 40px 50px 25px 50px
+
+.bn-block
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -5px
+		+media-breakpoint-up(sm)
+			margin: 0 -10px
+		+media-breakpoint-up(wxpp)
+			margin: 0 -15px
+	&__col
+		padding: 0 5px
+		flex: 0 0 100%
+		max-width: 100%
+		+media-breakpoint-up(sm)
+			flex: 0 0 50%
+			max-width: 50%
+			padding: 0 10px
+		+media-breakpoint-up(wxpp)
+			padding: 0 15px
+
+.bn
+	margin-bottom: 30px
+	display: block
+	+media-breakpoint-up(sm)
+		margin-bottom: 41px
+	+media-breakpoint-up(xl)
+		margin-bottom: 71px
+	&__item
+
+.editor
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 30px
+	align-items: center
+	/* .editor__left */
+	&__left
+		margin-right: 30px
+	/* .editor__img */
+	&__img
+		border-radius: 50%
+		max-height: 130px
+		width: 130px
+		object-fit: cover
+		object-position: top
+	/* .editor__right */
+	&__right
+
+	/* .editor__name */
+	&__name
+		margin: 0
+		font-weight: 700
+	/* .editor__pos */
+	&__pos
+
+@keyframes "fade"
+	from
+		opacity: 0
+	to
+		opacity: 1
